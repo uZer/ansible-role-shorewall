@@ -44,7 +44,7 @@ Using ansible galaxy requirements file:
 | `manala_shorewall_configs_dir`    | /etc/shorewall                | String  | Path to configs directory                   |
 | `manala_shorewall_configs`        | []                            | Array   | Configs (zones, rules, interfaces, ...)     |
 | `manala_shorewall_config_file`    | /etc/shorewall/shorewall.conf | String  | Path to main config file                    |
-| `manala_shorewall_config`         | []                            | Array   | Main config                                 |
+| `manala_shorewall_config`         | {}                            | Dict    | Main config                                 |
 
 ## Configuration examples (See [Shorewall documentation](http://shorewall.net/Documentation_Index.html) for further informations)
 
