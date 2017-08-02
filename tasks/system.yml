@@ -1,0 +1,15 @@
+---
+- name: configure ip_forward
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: 1
+    sysctl_set: yes
+    state: present
+    reload: yes
+  notify:
+    - shorewall restart
+
+- name: service should be enabled
+  service:
+    name: shorewall
+    enabled: yes
