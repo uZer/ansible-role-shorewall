@@ -1,4 +1,10 @@
 ---
+- name: install PPA if needed
+  apt_repository:
+    repo: 'ppa:mpandersen/shorewall-backport'
+    state: present
+  when: has_docker and ansible_distribution_release == "Xenial"
+  notify: apt-get reload
 
 - name: install > Packages
   apt:

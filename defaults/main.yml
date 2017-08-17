@@ -7,3 +7,4 @@ manala_shorewall_configs:     []
 # Config
 manala_shorewall_config_file: /etc/shorewall/shorewall.conf
 manala_shorewall_config:      []
+has_docker: no

@@ -1,4 +1,7 @@
 ---
+- name: apt-get reload
+  apt:
+    update_cache: yes
 
 - name: shorewall restart
   service:
