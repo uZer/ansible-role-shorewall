@@ -3,13 +3,15 @@
   apt_repository:
     repo: 'ppa:mpandersen/shorewall-backport'
     state: present
-  when: has_docker and ansible_distribution_release == "Xenial"
+  when: has_docker and ansible_distribution_release == "xenial"
   notify: apt-get reload
+
+- meta: flush_handlers
 
 - name: install > Packages
   apt:
     name:  "{{ item }}"
-    state: present
+    state: latest
     install_recommends: false
     update_cache:       true
     cache_valid_time:   3600
